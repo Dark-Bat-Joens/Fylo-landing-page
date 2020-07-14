@@ -1,0 +1,58 @@
+.header {
+
+    &__nav--container {
+        position: relative;
+        width: 100%;  
+        padding: 1rem;    
+                
+        & ul {                                    
+            position: absolute;
+            right: 0;
+            top: 2.5rem;
+            
+            @include respond(tab-port) {
+                top: 1.4rem;
+            }    
+
+            & li {
+                display: inline;
+                list-style: none;
+
+                & a {
+                    margin-right: 3.5rem;
+                    color: $color-text;
+
+                    &:hover {
+                        color: $color-secondary;
+                    }
+
+                    @include respond(tab-port) {
+                        margin-right: 1rem;
+                        font-size: 1.25rem;
+                    }            
+                }
+            }
+        }
+    }    
+}
+
+.hover-underline-animation {
+    display: inline-block;
+    position: relative;    
+  }
+  .hover-underline-animation::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: $color-secondary;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+  .hover-underline-animation:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }

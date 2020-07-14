@@ -1,0 +1,128 @@
+.footer {
+    padding-top: 4rem;
+    padding-bottom: 10rem;
+    background-color: $color-primary-2;
+
+    @include respond(tab-port) {
+        padding-bottom: 3rem;
+    }
+
+    &__content {
+        margin-top: 14rem;
+
+        @include respond(tab-port) {
+            padding: 1rem;
+        }
+    }
+
+    &__details {
+        margin-top: 2rem;
+
+        & .col-lg-2 {
+
+            @include respond(tab-port) {
+                width: 10%;
+            }
+        }
+
+        & .col-lg-10 {
+
+            @include respond(tab-port) {
+                width: 90%;
+            }
+        }
+
+        & .col-lg-2,
+        .col-lg-10 {
+
+            @include respond(tab-port) {
+                float: left !important;
+                left: 0 !important;
+            }
+        }
+
+        &--1 {
+            margin-top: 7rem;
+
+            @include respond(tab-port) {
+                margin-top: 3rem;
+            }
+        }
+
+        & i {
+            margin-right: 1rem;
+            height: 100%;
+            color: $color-white;
+
+            @include respond(tab-port) {
+                margin-right: 0 !important;
+            }
+        }
+
+        & p {
+            color: $color-text;
+            margin-left: -2rem;
+
+            @include respond(tab-port) {
+                margin-left: -1rem !important;
+                font-size: 1.3rem;
+            }
+        }
+
+        & ul>li {
+            list-style: none;
+
+            &:not(:last-child) {
+                margin-bottom: 1rem;
+            }
+
+            & a {
+                color: $color-text;
+
+                &:hover {
+                    color: $color-secondary;
+                }
+            }
+        }
+    }
+
+    &__social--icons {
+
+        & .footer__details ul>li {
+            display: inline !important;
+
+            & a {
+                margin-right: .3rem;
+
+                & i {
+                    position: relative;
+                    width: 3rem;
+                    height: 3rem;
+                    text-align: center;
+                    border-radius: 50%;
+                    line-height: 3rem;
+                    transition: transform .5s ease;
+                    z-index: 10;
+                    background-image: linear-gradient(90deg, $color-secondary, $color-secondary-1);
+                    background-size: 100%;
+
+                    &:hover {
+                        transform: scale(1.1);
+                    }                   
+
+                    &:before {
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        border-radius: 50%;
+                        z-index: -1;
+                        transform: translateX(-50%);
+                        background-image: linear-gradient(90deg, $color-secondary, $color-secondary-1);
+                        background-size: 100%;                        
+                        background-image: none;
+                    }
+                }
+            }
+        }
+    }
+}

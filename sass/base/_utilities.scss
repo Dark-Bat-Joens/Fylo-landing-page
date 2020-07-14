@@ -1,0 +1,33 @@
+.section-padding {
+    padding: 4rem 10rem;
+
+    @include respond(tab-port) {
+        padding: 4rem 2rem;
+    }
+}
+
+.width-spacing {
+    margin: 0 auto;
+    width: 80%;
+
+    @include respond(tab-port) {
+        width: 100% !important;
+    }
+}
+
+.vector-img {
+    animation-name: floating;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+
+    height: 40rem;
+    z-index: 2 !important;
+
+    @include respond(tab-port) {
+        height: 20rem !important;
+    }
+
+    &-1 {
+        height: 50rem;       
+    }
+}

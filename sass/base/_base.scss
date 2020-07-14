@@ -1,0 +1,35 @@
+*, 
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+body {
+    box-sizing: inherit;  
+    background-color: $color-primary; 
+    overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+    visibility: hidden;
+    width: 1rem;
+    transition: all .2s;
+}
+
+::-webkit-scrollbar:hover {
+    visibility: visible;
+}
+
+::-webkit-scrollbar-track {    
+    background-color: $color-primary;
+}
+
+::-webkit-scrollbar-thumb {
+    background-image: linear-gradient($color-secondary, $color-secondary-1);
+}

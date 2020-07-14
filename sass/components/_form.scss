@@ -1,0 +1,69 @@
+.form {
+    margin-top: 10rem;
+    position: relative;
+    top: 15rem;
+    width: 70%;
+    margin: 0 auto;
+    padding: 5rem;    
+    background-color: $color-primary;
+    border-radius: .3rem;
+    box-shadow: 0 0 2rem $color-primary-1;
+
+    @include respond(phone) {
+        width: 100%;        
+        padding: 3rem;
+        margin-top: 2rem !important;
+    }
+
+    & h2 {
+        color: $color-white;
+        font-size: 3rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+        margin-top: 1rem;
+
+        @include respond(tab-port) {
+            font-size: 1.75rem;
+        }
+    }
+
+    & p {
+        color: $color-text;
+        width: 90%;
+        margin: 0 auto;   
+        margin-bottom: 3rem;   
+        
+        @include respond(tab-port) {
+            font-size: 1.2rem;
+        }
+    }
+
+    &__content {
+        width: 100%;
+        @include clearfix;
+        text-align: justify;        
+    }
+
+    &__input {
+        padding: 1rem;
+        border-radius: 2.5rem;
+        border: none;
+        outline: none !important;
+        width: 100%;   
+        border: 3px solid transparent;
+        margin-bottom: 2rem;
+        
+        &:focus {
+            border: 3px solid $color-secondary-1;
+        }        
+    }
+
+    & .header__caption--button {                    
+        margin-top: 0;
+        padding: 1.2rem 2rem !important;
+
+        @include respond(tab-port) {
+            width: 100%;
+        }
+    }
+}
